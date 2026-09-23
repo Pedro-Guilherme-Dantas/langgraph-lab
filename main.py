@@ -5,8 +5,7 @@ from rich import print
 
 # O Estado
 # O primeiro passo para definirmos um grafo será modelar o estado. Existe um
-# padrão para isso, mas não estou seguindo isso aqui neste momento (vamos falar
-# sobre isso em aulas futuras).
+# padrão para isso, mas este exemplo mantém uma estrutura mínima e explícita.
 # O estado pode ser um `TypedDict` ou uma `dataclass`. Também podemos usar um
 # modelo do Pydantic, porém isso é um pouco menos performático (de acordo com a
 # documentação).
@@ -16,7 +15,7 @@ from rich import print
 
 
 def reducer(a: list[str], b: list[str]) -> list[str]:
-    # Aqui você poderia usar operator.add ou add_messages (falaremos adiante)
+    # Também seria possível usar operator.add ou add_messages.
     reducer_result = a + b
     print("> reducer em execução", f"{reducer_result=}")
     return reducer_result
